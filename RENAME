@@ -1,0 +1,28 @@
+LINUX BASH
+Rename file in a folder
+Example
+/Scrivania/stagione8  list of file inside folder:
+
+108822-8x01.Farhampton..C.e.ancora.tempo.mkv.mp4 -
+110325-8x13.Band.or.DJ..Band.o.dj.mkv.mp4 -
+168512-8x19.The.Fortress..La.fortezza.mkv.mp4 -
+245885-8x04.Who.Wants.to.be.a.Godparent..La.scelta.del.tutore.mkv.mp4 -
+251124-8x07.The.Stamp.Tramp..Il.timbro.facile.mkv.mp4 -
+257628-8x18.Weekend.at.Barney.s..Weekend.con.il.morto.mkv.mp4 -
+265586-8x15.P.S..I.Love.You..P.S..ti.amo.mkv.mp4 -
+269620-8x22.The.Bro.Mitzvah..L.addio.al.celibato.mkv.mp4 -
+334661-8x24.Something.New..Qualcosa.di.nuovo.mkv.mp4 -
+367296-8x05.The.Autumn.of.BreakUps..Amori.agli.sgoccioli.mkv.mp4 -
+483334-8x20.Time.Travelers..Viaggiatori.nel.tempo.mkv.mp4 -
+539750-8x09.Lobster.Crawl..Caccia.all.aragosta.mkv.mp4 -
+
+I want cut first six character to have 8x01.Farhampton..C.e.ancora.tempo.mkv.mp4
+
+command is:
+for x in *; do
+    echo mv $x `echo $x | cut -c 5-`
+done
+
+run in this way first, and then remove the leading echo once you're confident that it does what you want:
+
+for x in *; do  mv $x `echo $x | cut -c 8-`; done
