@@ -18,10 +18,12 @@ Example
 
 I want cut first six character to have 8x01.Farhampton..C.e.ancora.tempo.mkv.mp4
 
-command is:
+command:
+
 for x in *; do
     echo mv $x `echo $x | cut -c 5-`
 done
+
 
 run in this way first, and then remove the leading echo once you're confident that it does what you want:
 
